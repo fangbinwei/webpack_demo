@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('../fonts/Honeyflower-Regular.woff2') format('woff2'),
+       url('../fonts/Honeyflower-Regular.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+.hello {
+  color: red;
+  background: url('../img/icon.png');
+  background-repeat: no-repeat; 
+  font-family: 'MyFont';
+  font-size: 2rem;
+}
