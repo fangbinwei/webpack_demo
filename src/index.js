@@ -1,10 +1,12 @@
 // import _ from 'lodash'
 import printMe from './print.js'
+import './assets/css/style.css'
 function component() {
   var element = document.createElement('div')
   var btn = document.createElement('button')
 
   element.innerHTML = [].join.call(['Hello', 'webpack', 'Sleepwalker'], ' ')
+  element.classList.add('hello')
   btn.innerHTML = 'Click me and check the console!'
   btn.onclick = printMe
 
