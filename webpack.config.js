@@ -6,8 +6,7 @@ const webpack = require('webpack')
 module.exports = {
   mode: 'development',
   entry: {
-    app: './src/index.js',
-    print: './src/print.js'
+    app: './src/index.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -15,14 +14,17 @@ module.exports = {
     publicPath: '/'
   },
   devtool: 'inline-source-map',
-  // devServer: {
-  //   contentBase: './dist'
-  // },
+  devServer: {
+    contentBase: './dist',
+    hot: true
+  },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'development'
-    })
+    }),
+    new webpack.NamedChunksPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     rules: [
